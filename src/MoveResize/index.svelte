@@ -71,7 +71,7 @@
 </div>
 
 {#if active || trans}
-  <div class="svlt-grid-shadow shadow-active" style="width: {shadow.w * xPerPx - gapX * 2}px; height: {shadow.h * yPerPx - gapY * 2}px; transform: translate({shadow.x * xPerPx + gapX}px, {shadow.y * yPerPx + gapY}px); " bind:this={shadowElement} />
+  <div class="svlt-grid-shadow shadow-active" style="width: {shadow.w * xPerPx - gapX * 2}px; height: {shadow.h * yPerPx - gapY * 2}px; left: {shadow.x * xPerPx + gapX}px; top: {shadow.y * yPerPx + gapY}px; " bind:this={shadowElement} />
 {/if}
 
 <script>
