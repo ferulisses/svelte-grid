@@ -63,7 +63,7 @@
   class="svlt-grid-item"
   class:svlt-grid-active={active || (trans && rect)}
   style="width: {active ? newSize.width : width}px; height:{active ? newSize.height : height}px; 
-  {active ? `left: ${cordDiff.x + rect.left}px; left: ${cordDiff.y + rect.top}px;` : trans ? `left: ${cordDiff.x}px; top: ${cordDiff.y}px; position:absolute; transition: width 0.2s, height 0.2s;` : `transition: transform 0.2s, opacity 0.2s; left: ${left}px; top: ${top}px; `} ">
+  {active ? `left: ${cordDiff.x + rect.left}px !important; left: ${cordDiff.y + rect.top}px !important;` : trans ? `left: ${cordDiff.x}px; top: ${cordDiff.y}px; position:absolute; transition: width 0.2s, height 0.2s;` : `transition: transform 0.2s, opacity 0.2s; left: ${left}px; top: ${top}px; `} ">
   <slot movePointerDown={pointerdown} {resizePointerDown} />
   {#if resizable && !item.customResizer}
     <div class="svlt-grid-resizer" on:pointerdown={resizePointerDown} />
